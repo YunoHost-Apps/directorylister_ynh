@@ -20,14 +20,14 @@ Directory Lister is the easiest way to expose the contents of any web-accessible
 
 ### Features
 
-    Simple installation
-    Light and dark themes
-    Custom sort ordering
-    File search
-    File hashes
-    Readme rendering
-    Zip downloads
-    Multi-lingual
+- Simple installation
+- Light and dark themes
+- Custom sort ordering
+- File search
+- File hashes
+- Readme rendering
+- Zip downloads
+- Multi-lingual
 
 
 **Shipped version:** 3.12.3~ynh1
