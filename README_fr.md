@@ -42,7 +42,7 @@ Directory Lister est le moyen le plus simple d'exposer le contenu de n'importe q
 * Site officiel de l’app : <https://www.directorylister.com/>
 * Documentation officielle de l’admin : <https://docs.directorylister.com/>
 * Dépôt de code officiel de l’app : <https://github.com/DirectoryLister/DirectoryLister>
-* Documentation YunoHost pour cette app : <https://yunohost.org/app_directorylister>
+* YunoHost Store: <https://apps.yunohost.org/app/directorylister>
 * Signaler un bug : <https://github.com/YunoHost-Apps/directorylister_ynh/issues>
 
 ## Informations pour les développeurs
