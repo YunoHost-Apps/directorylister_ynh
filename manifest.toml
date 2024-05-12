@@ -5,7 +5,7 @@ name = "Directory Lister"
 description.en = "Expose the contents of any web-accessible folder for browsing and sharing"
 description.fr = "Exposez le contenu de n'importe quel dossier accessible sur le Web pour la navigation et le partage"
 
-version = "3.12.3~ynh1"
+version = "4.0.0~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -17,11 +17,14 @@ admindoc = "https://docs.directorylister.com/"
 code = "https://github.com/DirectoryLister/DirectoryLister"
 
 [integration]
-yunohost = ">= 11.1.21"
+yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = true
+
 ldap = false
+
 sso = false
+
 disk = "50M"
 ram.build = "50M"
 ram.runtime = "50M"
@@ -51,8 +54,8 @@ ram.runtime = "50M"
 
         [resources.sources.main]
         in_subdir = false
-        url = "https://github.com/DirectoryLister/DirectoryLister/releases/download/3.12.3/DirectoryLister-3.12.3.tar.gz"
-        sha256 = "bda6033c0e1d5a6b9deed094b3aefce7dd22f8aaece71a70474425793e288cad"
+        url = "https://github.com/DirectoryLister/DirectoryLister/releases/download/4.0.0/DirectoryLister-4.0.0.tar.gz"
+        sha256 = "535331654d51d822bc4cd83a81a9de6399badc21da9f039a1451bc9a6427f19a"
         autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
