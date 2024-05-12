@@ -17,11 +17,14 @@ admindoc = "https://docs.directorylister.com/"
 code = "https://github.com/DirectoryLister/DirectoryLister"
 
 [integration]
-yunohost = ">= 11.1.21"
+yunohost = ">= 11.2"
 architectures = "all"
 multi_instance = true
+
 ldap = false
+
 sso = false
+
 disk = "50M"
 ram.build = "50M"
 ram.runtime = "50M"
@@ -51,8 +54,8 @@ ram.runtime = "50M"
 
         [resources.sources.main]
         in_subdir = false
-        url = "https://github.com/DirectoryLister/DirectoryLister/archive/refs/tags/4.0.0.tar.gz"
-        sha256 = "dba5832579cf06d158e8669510b074d1820af31632aa114704f51012b0c19143"
+        url = "https://github.com/DirectoryLister/DirectoryLister/releases/download/4.0.0/DirectoryLister-4.0.0.tar.gz"
+        sha256 = "535331654d51d822bc4cd83a81a9de6399badc21da9f039a1451bc9a6427f19a"
         autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
