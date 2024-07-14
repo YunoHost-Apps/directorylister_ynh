@@ -58,7 +58,9 @@ ram.runtime = "50M"
     in_subdir = false
     url = "https://github.com/DirectoryLister/DirectoryLister/archive/refs/tags/4.1.0.tar.gz"
     sha256 = "4b2d2eade47ad1f48775bf2b1b66f25131f53ffa1563978dd9b771aedde400ef"
-    autoupdate.strategy = "latest_github_tag"
+
+    autoupdate.strategy = "latest_github_release"
+    autoupdate.asset = "DirectoryLister-.*\\.tar\\.gz"
 
     [resources.system_user]
 
