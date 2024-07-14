@@ -1,3 +1,5 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json
+
 packaging_format = 2
 
 id = "directorylister"
@@ -44,7 +46,7 @@ ram.runtime = "50M"
     [install.language]
     ask.en = "Choose the application language"
     ask.fr = "Choisissez la langue de l'application"
-    type = "string"
+    type = "select"
     choices = ["fr", "en"]
     default = "fr"
 
@@ -52,11 +54,11 @@ ram.runtime = "50M"
 
     [resources.sources]
 
-        [resources.sources.main]
-        in_subdir = false
-        url = "https://github.com/DirectoryLister/DirectoryLister/archive/refs/tags/4.1.0.tar.gz"
-        sha256 = "4b2d2eade47ad1f48775bf2b1b66f25131f53ffa1563978dd9b771aedde400ef"
-        autoupdate.strategy = "latest_github_tag"
+    [resources.sources.main]
+    in_subdir = false
+    url = "https://github.com/DirectoryLister/DirectoryLister/archive/refs/tags/4.1.0.tar.gz"
+    sha256 = "4b2d2eade47ad1f48775bf2b1b66f25131f53ffa1563978dd9b771aedde400ef"
+    autoupdate.strategy = "latest_github_tag"
 
     [resources.system_user]
 
@@ -66,4 +68,9 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.apt]
-    packages = "php8.2-fpm, php8.2-fileinfo, php8.2-dom, php8.2-zip"
+    packages = [
+        "php8.2-fpm",
+        "php8.2-fileinfo",
+        "php8.2-dom",
+        "php8.2-zip",
+    ]
