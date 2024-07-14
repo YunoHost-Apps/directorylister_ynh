@@ -1,3 +1,5 @@
+#:schema https://raw.githubusercontent.com/YunoHost/apps/master/schemas/manifest.v2.schema.json
+
 packaging_format = 2
 
 id = "directorylister"
@@ -5,7 +7,7 @@ name = "Directory Lister"
 description.en = "Expose the contents of any web-accessible folder for browsing and sharing"
 description.fr = "Exposez le contenu de n'importe quel dossier accessible sur le Web pour la navigation et le partage"
 
-version = "4.0.0~ynh1"
+version = "4.1.0~ynh1"
 
 maintainers = ["eric_G"]
 
@@ -44,7 +46,7 @@ ram.runtime = "50M"
     [install.language]
     ask.en = "Choose the application language"
     ask.fr = "Choisissez la langue de l'application"
-    type = "string"
+    type = "select"
     choices = ["fr", "en"]
     default = "fr"
 
@@ -52,11 +54,13 @@ ram.runtime = "50M"
 
     [resources.sources]
 
-        [resources.sources.main]
-        in_subdir = false
-        url = "https://github.com/DirectoryLister/DirectoryLister/releases/download/4.0.0/DirectoryLister-4.0.0.tar.gz"
-        sha256 = "535331654d51d822bc4cd83a81a9de6399badc21da9f039a1451bc9a6427f19a"
-        autoupdate.strategy = "latest_github_tag"
+    [resources.sources.main]
+    in_subdir = false
+    url = "https://github.com/DirectoryLister/DirectoryLister/releases/download/4.1.0/DirectoryLister-4.1.0.tar.gz"
+    sha256 = "94d462f5097cba7c362ce33b841bb8975f5f6553ebfdb0ac4b36c4b4b8760d00"
+
+    autoupdate.strategy = "latest_github_release"
+    autoupdate.asset = "DirectoryLister-.*\\.tar\\.gz"
 
     [resources.system_user]
 
@@ -66,4 +70,9 @@ ram.runtime = "50M"
     main.url = "/"
 
     [resources.apt]
-    packages = "php8.2-fpm, php8.2-fileinfo, php8.2-dom, php8.2-zip"
+    packages = [
+        "php8.2-fpm",
+        "php8.2-fileinfo",
+        "php8.2-dom",
+        "php8.2-zip",
+    ]
