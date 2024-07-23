@@ -29,7 +29,7 @@ Directory Lister est le moyen le plus simple d'exposer le contenu de n'importe q
 - Multilingue
 
 
-**Version incluse :** 4.1.0~ynh1
+**Version incluse :** 4.2.0~ynh1
 
 **Démo :** <https://demo.directorylister.com/>
 
