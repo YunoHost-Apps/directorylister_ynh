@@ -42,7 +42,7 @@ Directory Lister is the easiest way to expose the contents of any web-accessible
 
 - Website aplikasi resmi: <https://www.directorylister.com/>
 - Dokumentasi admin resmi: <https://docs.directorylister.com/>
-- Repositori kode aplikasi hulu: <https://github.com/DirectoryLister/DirectoryLister>
+- Depot kode aplikasi hulu: <https://github.com/DirectoryLister/DirectoryLister>
 - Gudang YunoHost: <https://apps.yunohost.org/app/directorylister>
 - Laporkan bug: <https://github.com/YunoHost-Apps/directorylister_ynh/issues>
 
