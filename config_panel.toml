@@ -1,7 +1,7 @@
 version = "1.0"
 
 [main]
-name = "My Webapp configuration"
+name = "SFTP configuration"
 
     [main.sftp]
     name.en = "SFTP access"
