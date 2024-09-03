@@ -31,7 +31,7 @@ else
     groups=""
 fi
 
-    ynh_system_user_create --username=$app --home_dir="$install_dir" --groups="$groups"
+    ynh_system_user_create --username=$app --home_dir="$data_dir" --groups="$groups"
 
 if [ $with_sftp -eq 1 ]
 then
@@ -39,13 +39,14 @@ then
     chpasswd <<< "${app}:${password}"
 fi
 
-chown -R $app:www-data "$install_dir"
+mkdir $data_dir/data
+chown -R $app:www-data "$data_dir"
 # Home directory of the user needs to be owned by root to allow
 # SFTP connections
-chown root:root "$install_dir"
-setfacl -m g:$app:r-x "$install_dir"
-setfacl -m g:www-data:r-x "$install_dir"
-chmod 750 "$install_dir"
+chown root:root "$data_dir"
+setfacl -m g:$app:r-x "$data_dir"
+setfacl -m g:www-data:r-x "$data_dir"
+chmod 750 "$data_dir"
 
 #=================================================
 # ADD A CONFIGURATION
@@ -53,6 +54,8 @@ chmod 750 "$install_dir"
 ynh_script_progression "Adding $app's configuration..."
 
 ynh_config_add --template=".env.example" --destination="$install_dir/.env"
+
+ynh_replace_string --match_string="'open_basedir', __DIR__" --replace_string="'open_basedir', __DIR__, $data_dir/data" --target_file="$install_dir/index.php"
 
 #=================================================
 # SYSTEM CONFIGURATION
