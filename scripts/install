@@ -26,9 +26,20 @@ ynh_setup_source --dest_dir="$install_dir"
 
 if [ $with_sftp -eq 1 ]
 then
+    groups="sftp.app"
+else
+    groups=""
+fi
+
+    ynh_system_user_create --username=$app --home_dir="$install_dir" --groups="$groups"
+
+if [ $with_sftp -eq 1 ]
+then
     # Add the password to this user
     chpasswd <<< "${app}:${password}"
 fi
+
+
 
 #=================================================
 # ADD A CONFIGURATION
