@@ -51,6 +51,16 @@ ram.runtime = "50M"
     choices = ["fr", "en"]
     default = "fr"
 
+    [install.with_sftp]
+    ask.en = "Do you need a SFTP access?"
+    ask.fr = "Avez-vous besoin d'un accès SFTP ?"
+    type = "boolean"
+    default = true
+
+    [install.password]
+    type = "password"
+    optional = true
+    
 [resources]
 
     [resources.sources]
