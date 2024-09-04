@@ -39,7 +39,7 @@ then
     chpasswd <<< "${app}:${password}"
 fi
 
-mkdir $data_dir/data
+mkdir -p $data_dir/data
 chown -R $app:www-data "$data_dir"
 # Home directory of the user needs to be owned by root to allow
 # SFTP connections
