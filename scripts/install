@@ -22,7 +22,7 @@ ynh_app_setting_set --app=$app --key=password --value=$password
 #=================================================
 ynh_script_progression "Setting up source files..."
 
-ynh_setup_source --dest_dir="$install_dir/www"
+ynh_setup_source --dest_dir="$install_dir"
 
 if [ $with_sftp -eq 1 ]
 then
@@ -31,7 +31,7 @@ else
     groups=""
 fi
 
-    ynh_system_user_create --username=$app --home_dir="$install_dir/www" --groups="$groups"
+    ynh_system_user_create --username=$app --home_dir="$data_dir" --groups="$groups"
 
 if [ $with_sftp -eq 1 ]
 then
@@ -39,13 +39,14 @@ then
     chpasswd <<< "${app}:${password}"
 fi
 
-chown -R $app:www-data "$install_dir"
+mkdir $data_dir/data
+chown -R $app:www-data "$data_dir"
 # Home directory of the user needs to be owned by root to allow
 # SFTP connections
-chown root:root "$install_dir"
-setfacl -m g:$app:r-x "$install_dir"
-setfacl -m g:www-data:r-x "$install_dir"
-chmod 750 "$install_dir"
+chown root:root "$data_dir"
+setfacl -m g:$app:r-x "$data_dir"
+setfacl -m g:www-data:r-x "$data_dir"
+chmod 750 "$data_dir"
 
 #=================================================
 # ADD A CONFIGURATION
