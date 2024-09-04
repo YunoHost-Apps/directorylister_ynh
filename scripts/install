@@ -64,6 +64,8 @@ ynh_config_add_phpfpm
 
 ynh_config_add_nginx
 
+ynh_add_systemd_config --service="$app-mount" --template="directorylister.service"
+
 #=================================================
 # END OF SCRIPT
 #=================================================
