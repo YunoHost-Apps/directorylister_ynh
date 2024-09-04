@@ -1,0 +1,10 @@
+[Unit]
+Description=Mount directorylister data on install 
+
+[Mount]
+What=__DATA_DIR__/data
+Where=__INSTALL_DIR__
+Type=bind
+
+[Install]
+WantedBy=multi-user.target
