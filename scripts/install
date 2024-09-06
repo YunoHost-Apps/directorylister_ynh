@@ -9,9 +9,9 @@ source /usr/share/yunohost/helpers
 
 [ $with_sftp -eq 0 ] || [ "$password" != "" ] || ynh_die --message="You need to set a password to enable SFTP"
 
-ynh_app_setting_set --key=php_upload_max_filesize --value=256M
+ynh_app_setting_set --key=php_upload_max_filesize --value=2G
 
-ynh_app_setting_set --key=php_memory_limit --value=256M
+ynh_app_setting_set --key=php_memory_limit --value=2G
 
 password=$YNH_APP_ARG_PASSWORD
 ssh_port=$(grep "^Port" /etc/ssh/sshd_config | awk '{print $2}')
