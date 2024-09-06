@@ -22,7 +22,7 @@ ynh_app_setting_set --app=$app --key=password --value=$password
 #=================================================
 ynh_script_progression "Setting up source files..."
 
-ynh_setup_source --dest_dir="$install_dir"
+ynh_setup_source --dest_dir="$install_dir/www"
 
 if [ $with_sftp -eq 1 ]
 then
@@ -31,7 +31,7 @@ else
     groups=""
 fi
 
-    ynh_system_user_create --username=$app --home_dir="$data_dir" --groups="$groups"
+    ynh_system_user_create --username=$app --home_dir="$install_dir" --groups="$groups"
 
 if [ $with_sftp -eq 1 ]
 then
@@ -39,21 +39,20 @@ then
     chpasswd <<< "${app}:${password}"
 fi
 
-mkdir -p $data_dir/data
-chown -R $app:www-data "$data_dir"
+chown -R $app:www-data "$install_dir"
 # Home directory of the user needs to be owned by root to allow
 # SFTP connections
-chown root:root "$data_dir"
-setfacl -m g:$app:r-x "$data_dir"
-setfacl -m g:www-data:r-x "$data_dir"
-chmod 750 "$data_dir"
+chown root:root "$install_dir"
+setfacl -m g:$app:r-x "$install_dir"
+setfacl -m g:www-data:r-x "$install_dir"
+chmod 750 "$install_dir"
 
 #=================================================
 # ADD A CONFIGURATION
 #=================================================
 ynh_script_progression "Adding $app's configuration..."
 
-ynh_config_add --template=".env.example" --destination="$install_dir/.env"
+ynh_config_add --template=".env.example" --destination="$install_dir/www/.env"
 
 #=================================================
 # SYSTEM CONFIGURATION
@@ -63,8 +62,6 @@ ynh_script_progression "Adding system configurations related to $app..."
 ynh_config_add_phpfpm
 
 ynh_config_add_nginx
-
-ynh_config_add_systemd --service="$app-mount" --template="../conf/directorylister.service"
 
 #=================================================
 # END OF SCRIPT
