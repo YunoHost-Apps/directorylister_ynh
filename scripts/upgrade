@@ -7,18 +7,22 @@
 source _common.sh
 source /usr/share/yunohost/helpers
 
-ynh_app_setting_set_default --key=php_upload_max_filesize --value=256M
+ynh_app_setting_set_default --key=php_upload_max_filesize --value=2G
 
-ynh_app_setting_set_default --key=php_memory_limit --value=256M
+ynh_app_setting_set_default --key=php_memory_limit --value=2G
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 ynh_script_progression "Upgrading source files..."
 
-ynh_config_remove_systemd
+ynh_setup_source --dest_dir="$install_dir"
 
-ynh_setup_source --dest_dir="$install_dir/www" --keep=".env"
+mv $install_dir/index.php $install_dir/www/index.php -f
+mv $install_dir/app/ $install_dir/www/app/ -f
+mv $install_dir/directory-lister.svg $install_dir/www/directory-lister.svg -f
+mv $install_dir/LICENSE $install_dir/www/LICENSE -f
+mv $install_dir/README.md $install_dir/www/README.md -f
 
 #==============================================
 # REAPPLY SYSTEM CONFIGURATIONS
@@ -28,8 +32,6 @@ ynh_script_progression "Upgrading system configurations related to $app..."
 ynh_config_add_phpfpm
 
 ynh_config_add_nginx
-
-ynh_config_add_systemd --service $app
 
 #=================================================
 # END OF SCRIPT
