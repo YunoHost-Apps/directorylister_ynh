@@ -16,13 +16,13 @@ ynh_app_setting_set_default --key=php_memory_limit --value=2G
 #=================================================
 ynh_script_progression "Upgrading source files..."
 
-ynh_setup_source --dest_dir="$install_dir"
+ynh_setup_source --dest_dir="$install_dir/www" --full_replace
 
-mv $install_dir/index.php $install_dir/www/index.php -f
-mv $install_dir/app/ $install_dir/www/app/ -f
-mv $install_dir/directory-lister.svg $install_dir/www/directory-lister.svg -f
-mv $install_dir/LICENSE $install_dir/www/LICENSE -f
-mv $install_dir/README.md $install_dir/www/README.md -f
+#mv $install_dir/index.php $install_dir/www/index.php -f
+#mv $install_dir/app/ $install_dir/www/app/ -f
+#mv $install_dir/directory-lister.svg $install_dir/www/directory-lister.svg -f
+#mv $install_dir/LICENSE $install_dir/www/LICENSE -f
+#mv $install_dir/README.md $install_dir/www/README.md -f
 
 #==============================================
 # REAPPLY SYSTEM CONFIGURATIONS
