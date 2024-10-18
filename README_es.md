@@ -30,7 +30,7 @@ Directory Lister is the easiest way to expose the contents of any web-accessible
 - Multi-lingual
 
 
-**Versión actual:** 4.2.0~ynh1
+**Versión actual:** 4.2.2~ynh1
 
 **Demo:** <https://demo.directorylister.com/>
 
@@ -48,7 +48,7 @@ Directory Lister is the easiest way to expose the contents of any web-accessible
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/directorylister_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/directorylister_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 
