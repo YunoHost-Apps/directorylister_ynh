@@ -5,7 +5,9 @@ It shall NOT be edited by hand.
 
 # Directory Lister for YunoHost
 
-[![Integration level](https://dash.yunohost.org/integration/directorylister.svg)](https://ci-apps.yunohost.org/ci/apps/directorylister/) ![Working status](https://ci-apps.yunohost.org/ci/badges/directorylister.status.svg) ![Maintenance status](https://ci-apps.yunohost.org/ci/badges/directorylister.maintain.svg)
+[![Integration level](https://apps.yunohost.org/badge/integration/directorylister)](https://ci-apps.yunohost.org/ci/apps/directorylister/)
+![Working status](https://apps.yunohost.org/badge/state/directorylister)
+![Maintenance status](https://apps.yunohost.org/badge/maintained/directorylister)
 
 [![Install Directory Lister with YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=directorylister)
 
@@ -30,7 +32,7 @@ Directory Lister is the easiest way to expose the contents of any web-accessible
 - Multi-lingual
 
 
-**Shipped version:** 4.2.0~ynh1
+**Shipped version:** 4.4.0~ynh1
 
 **Demo:** <https://demo.directorylister.com/>
 
