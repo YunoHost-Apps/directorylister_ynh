@@ -7,23 +7,52 @@
 source _common.sh
 source /usr/share/yunohost/helpers
 
-ynh_app_setting_set --key=php_upload_max_filesize --value=256M
+[ $with_sftp -eq 0 ] || [ "$password" != "" ] || ynh_die --message="You need to set a password to enable SFTP"
 
-ynh_app_setting_set --key=php_memory_limit --value=256M
+ynh_app_setting_set --key=php_upload_max_filesize --value=2G
+
+ynh_app_setting_set --key=php_memory_limit --value=2G
+
+password=$YNH_APP_ARG_PASSWORD
+ssh_port=$(grep "^Port" /etc/ssh/sshd_config | awk '{print $2}')
+ynh_app_setting_set --app=$app --key=password --value=$password
 
 #=================================================
 # DOWNLOAD, CHECK AND UNPACK SOURCE
 #=================================================
 ynh_script_progression "Setting up source files..."
 
-ynh_setup_source --dest_dir="$install_dir"
+ynh_setup_source --dest_dir="$install_dir/www"
+
+if [ $with_sftp -eq 1 ]
+then
+    groups="sftp.app"
+else
+    groups=""
+fi
+
+    ynh_system_user_create --username=$app --home_dir="$install_dir" --groups="$groups"
+
+if [ $with_sftp -eq 1 ]
+then
+    # Add the password to this user
+    chpasswd <<< "${app}:${password}"
+fi
+
+chown -R $app:www-data "$install_dir"
+# Home directory of the user needs to be owned by root to allow
+# SFTP connections
+chown root:root "$install_dir"
+setfacl -m g:$app:r-x "$install_dir"
+setfacl -m g:www-data:r-x "$install_dir"
+chmod 750 "$install_dir"
 
 #=================================================
 # ADD A CONFIGURATION
 #=================================================
 ynh_script_progression "Adding $app's configuration..."
 
-ynh_config_add --template=".env.example" --destination="$install_dir/.env"
+ynh_config_add --template=".env.example" --destination="$install_dir/www/.env"
 
 #=================================================
 # SYSTEM CONFIGURATION
