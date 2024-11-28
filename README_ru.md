@@ -5,7 +5,9 @@
 
 # Directory Lister для YunoHost
 
-[![Уровень интеграции](https://dash.yunohost.org/integration/directorylister.svg)](https://ci-apps.yunohost.org/ci/apps/directorylister/) ![Состояние работы](https://ci-apps.yunohost.org/ci/badges/directorylister.status.svg) ![Состояние сопровождения](https://ci-apps.yunohost.org/ci/badges/directorylister.maintain.svg)
+[![Уровень интеграции](https://apps.yunohost.org/badge/integration/directorylister)](https://ci-apps.yunohost.org/ci/apps/directorylister/)
+![Состояние работы](https://apps.yunohost.org/badge/state/directorylister)
+![Состояние сопровождения](https://apps.yunohost.org/badge/maintained/directorylister)
 
 [![Установите Directory Lister с YunoHost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=directorylister)
 
@@ -30,7 +32,7 @@ Directory Lister is the easiest way to expose the contents of any web-accessible
 - Multi-lingual
 
 
-**Поставляемая версия:** 4.2.0~ynh1
+**Поставляемая версия:** 4.4.0~ynh1
 
 **Демо-версия:** <https://demo.directorylister.com/>
 

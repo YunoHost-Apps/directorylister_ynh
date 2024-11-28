@@ -5,7 +5,9 @@ No se debe editar a mano.
 
 # Directory Lister para Yunohost
 
-[![Nivel de integración](https://dash.yunohost.org/integration/directorylister.svg)](https://ci-apps.yunohost.org/ci/apps/directorylister/) ![Estado funcional](https://ci-apps.yunohost.org/ci/badges/directorylister.status.svg) ![Estado En Mantención](https://ci-apps.yunohost.org/ci/badges/directorylister.maintain.svg)
+[![Nivel de integración](https://apps.yunohost.org/badge/integration/directorylister)](https://ci-apps.yunohost.org/ci/apps/directorylister/)
+![Estado funcional](https://apps.yunohost.org/badge/state/directorylister)
+![Estado En Mantención](https://apps.yunohost.org/badge/maintained/directorylister)
 
 [![Instalar Directory Lister con Yunhost](https://install-app.yunohost.org/install-with-yunohost.svg)](https://install-app.yunohost.org/?app=directorylister)
 
@@ -30,7 +32,7 @@ Directory Lister is the easiest way to expose the contents of any web-accessible
 - Multi-lingual
 
 
-**Versión actual:** 4.2.0~ynh1
+**Versión actual:** 4.4.0~ynh1
 
 **Demo:** <https://demo.directorylister.com/>
 
@@ -48,7 +50,7 @@ Directory Lister is the easiest way to expose the contents of any web-accessible
 
 ## Información para desarrolladores
 
-Por favor enviar sus correcciones a la [`branch testing`](https://github.com/YunoHost-Apps/directorylister_ynh/tree/testing
+Por favor enviar sus correcciones a la [rama `testing`](https://github.com/YunoHost-Apps/directorylister_ynh/tree/testing).
 
 Para probar la rama `testing`, sigue asÍ:
 
