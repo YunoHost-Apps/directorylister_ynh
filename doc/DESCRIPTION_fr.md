@@ -1,4 +1,4 @@
-Directory Lister est le moyen le plus simple d'exposer le contenu de n'importe quel dossier accessible sur le Web pour la navigation et le partage. Avec une configuration zéro, une installation par glisser-déposer, vous serez opérationnel en moins d'une minute.
+Directory Lister est le moyen le plus simple d'exposer le contenu de n'importe quel dossier accessible sur le Web pour la navigation et le partage.
 
 ### Fonctionnalités
 
