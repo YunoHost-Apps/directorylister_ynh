@@ -72,7 +72,6 @@ ram.runtime = "50M"
 
     [resources.apt]
     packages = [
-        "php8.3-fpm",
         "php8.3-fileinfo",
         "php8.3-dom",
         "php8.3-zip",
