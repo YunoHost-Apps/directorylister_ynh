@@ -9,7 +9,7 @@ description.fr = "Exposez le contenu de n'importe quel dossier accessible sur le
 
 version = "4.4.0~ynh2"
 
-maintainers = ["eric_G"]
+maintainers = []
 
 [upstream]
 license = "MIT"
