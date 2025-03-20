@@ -25,6 +25,7 @@ architectures = "all"
 multi_instance = true
 
 ldap = false
+
 sso = false
 
 disk = "50M"
@@ -75,4 +76,5 @@ ram.runtime = "50M"
         "php8.3-fileinfo",
         "php8.3-dom",
         "php8.3-zip",
+        "php8.3-mbstring",
     ]
