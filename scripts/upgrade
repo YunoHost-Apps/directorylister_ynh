@@ -21,7 +21,7 @@ ynh_app_setting_set_default --key=php_memory_limit --value=256M
 ynh_script_progression "Upgrading source files..."
 
 # Download, check integrity, uncompress and patch the source from manifest.toml
-ynh_setup_source --dest_dir="$install_dir" --keep=".env"
+ynh_setup_source --dest_dir="$install_dir" --full_replace --keep=".env"
 
 #=================================================
 # UPDATE A CONFIG FILE
