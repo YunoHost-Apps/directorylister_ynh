@@ -7,9 +7,9 @@ name = "Directory Lister"
 description.en = "Expose the contents of any web-accessible folder for browsing and sharing"
 description.fr = "Exposez le contenu de n'importe quel dossier accessible sur le Web pour la navigation et le partage"
 
-version = "4.4.0~ynh1"
+version = "5.0.0~ynh1"
 
-maintainers = ["eric_G"]
+maintainers = []
 
 [upstream]
 license = "MIT"
@@ -19,7 +19,7 @@ admindoc = "https://docs.directorylister.com/"
 code = "https://github.com/DirectoryLister/DirectoryLister"
 
 [integration]
-yunohost = ">= 11.2.29"
+yunohost = ">= 12.0.9"
 helpers_version = "2.1"
 architectures = "all"
 multi_instance = true
@@ -57,8 +57,8 @@ ram.runtime = "50M"
 
     [resources.sources.main]
     in_subdir = false
-    url = "https://github.com/DirectoryLister/DirectoryLister/releases/download/4.4.0/DirectoryLister-4.4.0.tar.gz"
-    sha256 = "aca159a70c692feed18c54b6eec632f5a3c08f79dccf4cf1a14ada13bf0dc067"
+    url = "https://github.com/DirectoryLister/DirectoryLister/releases/download/5.0.0/DirectoryLister-5.0.0.tar.gz"
+    sha256 = "9abc735a37617c210842e2355e20c6df08165021fa7a08ebf671ea6ae700f277"
 
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset = "DirectoryLister-.*\\.tar\\.gz"
@@ -73,8 +73,8 @@ ram.runtime = "50M"
 
     [resources.apt]
     packages = [
-        "php8.2-fpm",
-        "php8.2-fileinfo",
-        "php8.2-dom",
-        "php8.2-zip",
+        "php8.3-fileinfo",
+        "php8.3-dom",
+        "php8.3-zip",
+        "php8.3-mbstring",
     ]

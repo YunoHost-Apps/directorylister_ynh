@@ -18,7 +18,7 @@ It shall NOT be edited by hand.
 
 ## Overview
 
-Directory Lister is the easiest way to expose the contents of any web-accessible folder for browsing and sharing. With a zero configuration, drag-and-drop installation you'll be up and running in less than a minute.
+Directory Lister is the easiest way to expose the contents of any web-accessible folder for browsing and sharing.
 
 ### Features
 
@@ -32,7 +32,7 @@ Directory Lister is the easiest way to expose the contents of any web-accessible
 - Multi-lingual
 
 
-**Shipped version:** 4.4.0~ynh1
+**Shipped version:** 5.0.0~ynh1
 
 **Demo:** <https://demo.directorylister.com/>
 
