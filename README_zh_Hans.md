@@ -32,7 +32,7 @@ Directory Lister is the easiest way to expose the contents of any web-accessible
 - Multi-lingual
 
 
-**分发版本：** 5.0.3~ynh1
+**分发版本：** 5.0.4~ynh1
 
 **演示：** <https://demo.directorylister.com/>
 
