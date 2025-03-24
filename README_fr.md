@@ -31,7 +31,7 @@ Directory Lister est le moyen le plus simple d'exposer le contenu de n'importe q
 - Multilingue
 
 
-**Version incluse :** 5.0.2~ynh1
+**Version incluse :** 5.0.3~ynh1
 
 **Démo :** <https://demo.directorylister.com/>
 
