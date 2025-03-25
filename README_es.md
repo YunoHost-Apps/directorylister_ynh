@@ -3,7 +3,7 @@ Este archivo README esta generado automaticamente<https://github.com/YunoHost/ap
 No se debe editar a mano.
 -->
 
-# Directory Lister para Yunohost
+# Directory Lister para YunoHost
 
 [![Nivel de integración](https://apps.yunohost.org/badge/integration/directorylister)](https://ci-apps.yunohost.org/ci/apps/directorylister/)
 ![Estado funcional](https://apps.yunohost.org/badge/state/directorylister)
@@ -32,7 +32,7 @@ Directory Lister is the easiest way to expose the contents of any web-accessible
 - Multi-lingual
 
 
-**Versión actual:** 5.0.3~ynh1
+**Versión actual:** 5.0.4~ynh1
 
 **Demo:** <https://demo.directorylister.com/>
 

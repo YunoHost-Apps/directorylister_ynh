@@ -32,7 +32,7 @@ Directory Lister is the easiest way to expose the contents of any web-accessible
 - Multi-lingual
 
 
-**Paketatutako bertsioa:** 5.0.3~ynh1
+**Paketatutako bertsioa:** 5.0.4~ynh1
 
 **Demoa:** <https://demo.directorylister.com/>
 
@@ -52,7 +52,7 @@ Directory Lister is the easiest way to expose the contents of any web-accessible
 
 Bidali `pull request`a [`testing` abarrera](https://github.com/YunoHost-Apps/directorylister_ynh/tree/testing).
 
-`testing` abarra probatzeko, ondorengoa egin:
+`testing` abarra probatzeko, honakoa egin:
 
 ```bash
 sudo yunohost app install https://github.com/YunoHost-Apps/directorylister_ynh/tree/testing --debug
