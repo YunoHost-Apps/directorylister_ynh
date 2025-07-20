@@ -29,6 +29,10 @@ ynh_script_progression "Adding $app's configuration files..."
 
 ynh_config_add --template=".env.example" --destination="$install_dir/.env"
 
+mkdir -p /home/yunohost.multimedia/$admin/$app
+
+ynh_multimedia_addfolder --source_dir="$data_dir" --dest_dir="/home/yunohost.multimedia/$admin/$app"
+
 #=================================================
 # SYSTEM CONFIGURATION
 #=================================================
