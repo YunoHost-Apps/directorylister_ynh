@@ -40,6 +40,9 @@ ram.runtime = "50M"
     type = "path"
     default = "/directorylister"
 
+    [install.admin]
+    type = "user"
+
     [install.init_main_permission]
     type = "group"
     default = "visitors"
@@ -67,6 +70,9 @@ ram.runtime = "50M"
 
     [resources.install_dir]
     group = "www-data:r-x"
+
+    [resources.data_dir]
+    dir="/home/yunohost.multimedia/__ADMIN__/__APP__"
 
     [resources.permissions]
     main.url = "/"
