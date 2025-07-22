@@ -25,7 +25,6 @@ architectures = "all"
 multi_instance = true
 
 ldap = false
-
 sso = false
 
 disk = "50M"
@@ -78,8 +77,8 @@ ram.runtime = "50M"
 
     [resources.apt]
     packages = [
-        "php8.3-fileinfo",
-        "php8.3-dom",
-        "php8.3-zip",
-        "php8.3-mbstring",
+        "php8.4-fileinfo",
+        "php8.4-dom",
+        "php8.4-zip",
+        "php8.4-mbstring",
     ]
