@@ -7,7 +7,7 @@ name = "Directory Lister"
 description.en = "Expose the contents of any web-accessible folder for browsing and sharing"
 description.fr = "Exposez le contenu de n'importe quel dossier accessible sur le Web pour la navigation et le partage"
 
-version = "5.2.1~ynh1"
+version = "5.3.0~ynh1"
 
 maintainers = []
 
@@ -59,8 +59,8 @@ ram.runtime = "50M"
 
     [resources.sources.main]
     in_subdir = false
-    url = "https://github.com/DirectoryLister/DirectoryLister/releases/download/5.2.1/DirectoryLister-5.2.1.tar.gz"
-    sha256 = "609645e5c785183be2aed8bc3c70f5db910a93e02e55557f57f7e429f28a60cb"
+    url = "https://github.com/DirectoryLister/DirectoryLister/releases/download/5.3.0/DirectoryLister-5.3.0.tar.gz"
+    sha256 = "9694220ed7ebeb52c533da24ba0691bd19aa2544a8f3e840b6c9b95d92402153"
 
     autoupdate.strategy = "latest_github_release"
     autoupdate.asset = "DirectoryLister-.*\\.tar\\.gz"
